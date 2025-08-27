@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lanw="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked-List---DSA</title>
+</head>
+<body>
+    <script>
+
+console.log("********************************************************* Operation: Add & Print ****************************************************");
+
+class Node {
+    constructor (data) {
+      this.data = data;
+      this.next = null;
+    }
+}
+
+class LinkedList {
+    constructor() {
+        this.head = null;
+    }
+
+    add(data){
+        const newNode = new Node(data);
+        newNode.next = this.head;
+        this.head = newNode;
+    }
+
+    print() {
+        let current = this.head;
+        let result = '';
+        while (current) {
+            result += current.data + ' -> ';
+            current = current.next;
+        }
+        result += 'null';
+        console.log(` Add data in LinkedList: ${result}`);
+    }
+}
+
+// Usawe example:
+const list = new LinkedList();
+
+list.add(10);
+list.add(5);
+list.add(2);
+list.add(6);
+
+
+list.print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Nodes {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+class LinkedLists {
+    constructor() {
+      this.head = null;
+    }
+
+    add(data){
+         const newnode = new Node(data);
+        newnode.next = this.head;
+        this.head = newnode;
+    }
+
+    print(){
+       let current = this.head;
+        let result = ' ';
+        while (current) {
+            result += current.data + ' -> ';
+            current = current.next;
+        }
+        result += 'null';
+         console.log(` Add data in LinkedList: ${result}`);    
+    }
+}
+
+const item = new LinkedLists();
+
+item.add(10);
+item.add(20);
+item.add(30);
+item.add(40);
+item.add(50);
+
+item.print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Nodess {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class LinkedListss {
+    constructor() {
+        this.head = null;
+    }
+
+    add(data){
+        const newdata = new Nodess(data);
+        newdata.next = this.head;
+        this.head = newdata; 
+    }
+ 
+    print(){
+        let current = this.head;
+        let result = ' '; 
+        while (current) {
+            result += current.data + ' -> ';
+            current = current.next;
+        }
+        result += 'null';
+        console.log(` Add data in LinkedList: ${result}`);
+       
+    }
+}
+
+const items = new LinkedListss();
+items.add(5);
+items.add(4);
+items.add(3);
+items.add(2);
+items.add(1);
+
+
+items.print();
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Nodesss {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class LinkedListsss {
+    constructor() {
+        this.head = null;
+    }
+
+    add(data){
+       const newNode = new Nodesss(data);
+       newNode.next = this.head;
+       this.head = newNode;
+    }
+
+    print(){
+        let current = this.head;
+        let result = '';
+        while (current) {
+            result += current.data + ' -> ';
+            current = current.next; 
+        }
+        result += ' null '
+        console.log(` Add data in LinkedList: ${result}`);
+        
+    }
+}
+
+const my = new LinkedListsss();
+
+my.add(15);
+my.add(30);
+my.add(45);
+my.add(60);
+
+
+my.print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Nodessss {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class Linkedlistssss {
+    constructor() {
+        this.head = null;
+    }
+
+    add(data){
+        const newNode = new Nodessss(data);
+        newNode.next = this.head;
+        this.head = newNode;
+    }
+
+     print(){
+        let current = this.head;
+        let result = ' ';
+        while (current) {
+            result += current.data + ' -> ';
+            current = current.next;
+        }
+        result += ' null ';
+        console.log(` Add data in LinkedList: ${result}`);
+        }
+}
+ const itemssss = new Linkedlistssss;
+ 
+ itemssss.add(55);
+ itemssss.add(66);
+ itemssss.add(77);
+ itemssss.add(88);
+ itemssss.add(99);
+
+
+ itemssss.print();
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ console.log("******************************************************* Operation: Add & Reverse & Print************************************************************");
+ 
+
+class nodee {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+class LinkedListt{
+    constructor(){
+        this.head = null;
+    }
+
+    add(data){
+        const newNode = new nodee(data);
+        newNode.next = this.head;
+        this.head = newNode;
+    }
+
+    reverse(){
+        let prev = null;
+        let current = this.head;
+        let next = null;
+
+        while (current) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        this.head = prev;
+    }
+
+    print(){
+        let current = this.head;
+        let result = ' ';
+        while (current) {
+            result += current.data + ' -> ';
+            current = current.next;
+        }
+        result += ' null ';
+        console.log(` Oriwinal data [44,33,22,11] & data after reverse it: ${result}`);
+        
+    }
+}
+const listt = new LinkedListt;
+
+listt.add(11);
+listt.add(22);
+listt.add(33);
+listt.add(44);
+
+listt.reverse();
+listt.print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class nodeee {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+class LinkedListtt{
+    constructor(){
+        this.head = null;
+    }
+
+    add(data){
+        const newNode = new nodeee(data);
+        newNode.next = this.head;
+        this.head = newNode;
+    }
+
+    reverse(){
+        let prev = null;
+        let current = this.head;
+        let next = null;
+
+        while (current) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        this.head = prev;
+    }
+
+    print(){
+        let current = this.head;
+        let result = ' ';
+        while (current) {
+            result += current.data + ' -> ';
+            current = current.next;
+        }
+        result += ' null ';
+        console.log(` Oriwinal data [4,3,2,1] & data after reverse it: ${result}`);
+        
+    }
+}
+const listtt = new LinkedListtt;
+
+listtt.add(1);
+listtt.add(2);
+listtt.add(3);
+listtt.add(4);
+
+listtt.reverse();
+listtt.print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class nodeeee {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+class LinkedListttt{
+    constructor(){
+        this.head = null;
+    }
+
+    add(data){
+        const newNode = new nodeeee(data);
+        newNode.next = this.head;
+        this.head = newNode;
+    }
+
+   reverse(){
+    let prev = null;
+    let current = this.head;
+    let next = null;
+
+    while (current) {
+        next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
+    }
+    this.head = prev;
+   }
+
+    print(){
+        let current = this.head;
+        let result = ' ';
+        while (current) {
+            result += current.data + ' -> ';
+            current = current.next;
+        }
+        result += ' null ';
+        console.log(` Oriwinal data [400,300,200,100] & data after reverse it: ${result}`);
+        
+    }
+}
+const listttt = new LinkedListttt;
+
+listttt.add(100);
+listttt.add(200);
+listttt.add(300);
+listttt.add(400);
+
+listttt.reverse();
+listttt.print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class nodeeeee {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+class Linked{
+    constructor(){
+        this.head = null;
+    }
+
+    add(data){
+        const newNode = new nodeeeee(data);
+        newNode.next = this.head;
+        this.head = newNode;
+    }
+
+   reverse(){
+    let prev = null;
+    let current = this.head;
+    let next = null;
+
+    while (current) {
+        next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
+    }
+    this.head = prev;
+   }
+
+    print(){
+        let current = this.head;
+        let result = ' ';
+        while (current) {
+            result += current.data + ' -> ';
+            current = current.next;
+        }
+        result += ' null ';
+        console.log(` Oriwinal data [A,B,C,D] & data after reverse it: ${result}`);
+        
+    }
+}
+const l = new Linked;
+
+l.add('D');
+l.add('C');
+l.add('B');
+l.add('A');
+l.reverse();
+l.print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("****************************************************** Operation: Add & Delete & Print ************************************************** ");
+
+class Name {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+class link {
+    constructor() {
+        this.head = null;
+    }
+
+    add(data){
+        const newName = new Name (data);
+        newName.next = this.head;
+        this.head = newName;
+    }
+
+    delete(data){
+        if (this.head === null) {
+            console.log(` LinkedList is Empty [ _ _ _ ]`);
+            return;
+        }
+
+        if (this.head.data === data) {
+            this.head = this.head.next;
+            console.log(` Deleted data in LinkedList: ${data}`);
+            return;
+        }
+
+        let current = this.head
+        while (current.next && current.next.data !== data) {
+            current = current.next;
+        }
+        if (current.next) {
+            current.next = current.next.next;
+            console.log(` Deleted data in LinkedList: ${data}`);
+            
+        } else {
+            console.log(` data ${data} not in the list`);
+            
+        }
+    }
+
+    print(){
+        let current = this.head;
+        let result = ' ';
+        while (current) {
+            result += current.data + ' -> ';
+            current = current.next;
+        }
+        result += ' null ';
+        console.log(` Oriwinal data [11,12,13,14] & data after reverse it: ${result}`);
+        
+    }
+}
+  
+const d = new link;
+d.add(11);
+d.add(12);
+d.add(13);
+d.add(14);
+
+d.print();
+
+d.delete()
+d.delete(20)
+d.delete(13)
+d.delete(14)
+d.delete(11)
+d.delete(12)
+d.delete(5)
+
+d.print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('***************************************************** Operation: Add & Search & Print ***********************************************************');
+
+
+
+class Nod {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class Li {
+    constructor() {
+        this.head = null;
+    }
+
+    add(data){
+        const newdata = new Nod(data);
+        newdata.next = this.head;
+        this.head = newdata; 
+    }
+
+   delete(data){
+      if (this.head === null) {
+        console.log(`list is empty `);
+        return;
+      }
+      if (this.head.data === data) {
+        this.head = this.head.next;
+        console.log(`deleted the head data ${data}`);
+        return;
+      }   
+      let current = this.head;
+      while (current.next && current.next.data !== data) {
+        current = current.next;
+      }
+     if (current.next) {
+        current.next = current.next.next;
+        console.log(`delete data in list ${data}`);
+     } else {
+        console.log(`data not in the list`);
+        
+     }
+   }
+
+       reverse() {
+    let prev = null;
+    let current = this.head;
+    let next = null;
+    while (current) {
+        next = current.next;    
+        current.next = prev; 
+        prev = current;          
+        current = next;          
+    }
+    this.head = prev;            
+}
+
+      search(data){
+        let current = this.head;
+        while (current) {
+            if (current.data === data) {
+                console.log(` Data will found: ${data}`);
+                return true;
+            }
+            current = current.next;
+        }
+            console.log(` Data not in list: ${data}`);
+            
+      }
+
+    print(){
+        let current = this.head;
+        let result = ' '; 
+        while (current) {
+            result += current.data + ' -> ';
+            current = current.next;
+        }
+        result += 'null';
+        console.log(` data in LinkedList: ${result}`);
+       
+    }
+}
+
+const wo = new Li();
+
+wo.add(7);
+wo.add(4);
+wo.add(3);
+wo.add(2);
+wo.add(1); 
+
+wo.print();
+wo.search(7);
+wo.search(3);
+wo.search(1);
+wo.search();
+wo.search(4);
+
+
+    </script>
+</body>
+</html>

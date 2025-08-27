@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tree---DSA</title>
+  </head>
+  <body>
+    <script>
+      console.log(
+        "**************************************************************  Add data in tree  **********************************************************"
+      );
+
+      class No {
+        constructor(data) {
+          this.data = data;
+          this.left = null;
+          this.right = null;
+        }
+      }
+
+      class Tr {
+    constructor() {
+          this.root = null;
+        }
+
+        insert(data) {
+          const newNode = new No(data);
+          if (this.root === null) {
+            this.root = newNode;
+            return;
+          }
+          let current = this.root;
+          while (true) {
+            if (data === current.data) return;
+            if (data < current.data) {
+              if (current.left === null) {
+                current.left = newNode;
+                return;
+              }
+              current = current.left;
+            } else {
+              if (current.right === null) {
+                current.right = newNode;
+                return;
+              }
+              current = current.right;
+            }
+          }
+        }
+      }
+
+      const tt = new Tr();
+
+      tt.insert(62);
+      tt.insert(11);
+      tt.insert(41);
+      tt.insert(63);
+      tt.insert(18);
+      tt.insert(80);
+
+      console.log(tt);
+
+      class Node {
+        constructor(data) {
+          this.data = data;
+          this.left = null;
+          this.right = null;
+        }
+      }
+
+      class BST {
+        constructor() {
+          this.root = null;
+        }
+
+        insert(data) {
+          const newNode = new Node(data);
+
+          if (this.root === null) {
+            this.root = newNode;
+            return;
+          }
+          let current = this.root;
+          while (true) {
+            if (data === current.data) return;
+            if (data < current.data) {
+              if (current.left === null) {
+                current.left = newNode;
+                return;
+              }
+              current = current.left;
+            } else {
+              if (current.right === null) {
+                current.right = newNode;
+                return;
+              }
+              current = current.right;
+            }
+          }
+        }
+      }
+
+      const tree = new BST();
+      tree.insert(1);
+      tree.insert(6);
+      tree.insert(7);
+      tree.insert(2);
+      tree.insert(5);
+      tree.insert(1);
+      tree.insert(10);
+
+      console.log(tree);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      class Nodee {
+        constructor(data) {
+          this.data = data;
+          this.left = null;
+          this.right = null;
+        }
+      }
+      class BSTT {
+        constructor() {
+          this.root = null;
+        }
+
+        insert(data) {
+          const newNode = new Nodee(data);
+          if (this.root === null) {
+            this.root = newNode;
+            return;
+          }
+          let current = this.root;
+          while (true) {
+            if (data === current.data) return;
+            if (data < current.data) {
+              if (current.left === null) {
+                current.left = newNode;
+                return;
+              }
+              current = current.left;
+            } else {
+              if (current.right === null) {
+                current.right = newNode;
+                return;
+              }
+              current = current.right;
+            }
+          }
+        }
+      }
+
+      const trees = new BSTT();
+
+      trees.insert(1);
+      trees.insert(2);
+      trees.insert(3);
+      trees.insert(4);
+      trees.insert(5);
+
+      console.log(trees);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      class Nodeee {
+        constructor(data) {
+          this.data = data;
+          this.left = null;
+          this.right = null;
+        }
+      }
+      class BSTTT {
+        constructor() {
+          this.root = null;
+        }
+
+        insert(data) {
+          const newNode = new Nodeee(data);
+          if (this.root === null) {
+            this.root = newNode;
+            return;
+          }
+          let current = this.root;
+          while (true) {
+            if (data < current.data) {
+              if (current.left === null) {
+                current.left = newNode;
+                return;
+              }
+              current = current.left;
+            } else {
+              if (current.right === null) {
+                current.right = newNode;
+                return;
+              }
+              current = current.right;
+            }
+          }
+        }
+
+        search(data) {
+          let current = this.root;
+          while (current !== null) {
+            if (data === current.data) return true;
+            if (data < current.data) {
+              current = current.left;
+            } else {
+              current = current.right;
+            }
+          }
+          return false;
+        }
+      }
+
+      const treess = new BSTTT();
+
+      treess.insert(11);
+      treess.insert(77);
+      treess.insert(55);
+      treess.insert(44);
+      treess.insert(99);
+
+      console.log(treess);
+
+      console.log(
+        "************************************************************* Search data in tree **********************************************************"
+      );
+
+      console.log(
+        ` Search Operation:-- Data[44] is in the tree[11,77,55,44,99]: ${treess.search(
+          77
+        )}`
+      );
+      console.log(
+        ` Search Operation:-- Data[10] is in the tree[11,77,55,44,99]: ${treess.search(
+          50
+        )}`
+      );
+      console.log(
+        ` Search Operation:-- Data[44] is in the tree[11,77,55,44,99]: ${treess.search(
+          44
+        )}`
+      );
+      console.log(
+        ` Search Operation:-- Data[10] is in the tree[11,77,55,44,99]: ${treess.search(
+          10
+        )}`
+      );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      console.log(
+        "************************************************************** Traversal in tree ****************************************************************"
+      );
+
+      class N {
+        constructor(data) {
+          this.data = data;
+          this.left = null;
+          this.right = null;
+        }
+      }
+      class B {
+        constructor() {
+          this.root = null;
+        }
+
+        insert(data) {
+          const newNode = new N(data);
+          if (this.root === null) {
+            this.root = newNode;
+            return;
+          }
+          let current = this.root;
+          while (true) {
+            if (data < current.data) {
+              if (current.left === null) {
+                current.left = newNode;
+                return;
+              }
+              current = current.left;
+            } else {
+              if (current.right === null) {
+                current.right = newNode;
+                return;
+              }
+              current = current.right;
+            }
+          }
+        }
+
+        inorder() {
+          const result = [];
+          function traversal(node) {
+            if (!node) return;
+            traversal(node.left);
+            result.push(node.data);
+            traversal(node.right);
+          }
+          traversal(this.root);
+          return result;
+        }
+
+        preoder() {
+          const result = [];
+          function traversal(node) {
+            if (!node) return;
+            result.push(node.data);
+            traversal(node.left);
+            traversal(node.right);
+          }
+          traversal(this.root);
+          return result;
+        }
+
+        postoder() {
+          const result = [];
+          function traversal(node) {
+            if (!node) return;
+            traversal(node.left);
+            traversal(node.right);
+            result.push(node.data);
+          }
+          traversal(this.root);
+          return result;
+        }
+      }
+
+      const t = new B();
+      const data = [12, 47, 56, 41, 32, 78, 84];
+
+      for (const val of data) {
+        t.insert(val);
+      }
+
+      console.log("Real data: [12,47,56,41,32,78,84]");
+      console.log("Inorder", t.inorder());
+      console.log("Postoderd", t.postoder());
+      console.log("Preoder", t.preoder());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      console.log(
+        "************************************************************** Delete in tree ****************************************************************"
+      );
+
+      class NN {
+        constructor(data) {
+          this.data = data;
+          this.left = null;
+          this.right = null;
+        }
+      }
+      class BB {
+        constructor() {
+          this.root = null;
+        }
+
+        insert(data) {
+          const newNode = new NN(data);
+          if (this.root === null) {
+            this.root = newNode;
+            return;
+          }
+          let current = this.root;
+          while (true) {
+            if (data < current.data) {
+              if (current.left === null) {
+                current.left = newNode;
+                return;
+              }
+              current = current.left;
+            } else {
+              if (current.right === null) {
+                current.right = newNode;
+                return;
+              }
+              current = current.right;
+            }
+          }
+        }
+
+        remove(data) {
+          this.root = this.delete(this.root, data);
+        }
+        delete(root, data) {
+          if (this.root === null) {
+            return null;
+          }
+          if (data < root.data) {
+            root.left = this.delete(root.left, data);
+          } else if (data > root.data) {
+            root.right = this.delete(root.right, data);
+          } else {
+            if (!root.left && !root.right) {
+              return null;
+            } else if (!root.left) {
+              return root.right;
+            } else if (!root.right) {
+              return root.left;
+            }
+            root.data = this.mindata(root.right);
+            root.right = this.delete(root.right, root.data);
+          }
+          return root;
+        }
+
+        getMin() {
+          if (this.root === null) return null;
+          let node = this.root;
+          while (node.left !== null) {
+            node = node.left;
+          }
+          return node.data;
+        }
+      }
+
+      const ttt = new BB();
+      const dataa = [12, 47, 56, 41, 32, 78, 84];
+
+      ttt.insert(12);
+      ttt.insert(47);
+      ttt.insert(56);
+      ttt.insert(41);
+      ttt.insert(32);
+      ttt.insert(78);
+      ttt.insert(84);
+
+      console.log("Before delete data: [12,47,56,41,32,78,84]");
+      console.log(ttt);
+
+      console.log("After delete data: [12,47,56,32,78,84]");
+      ttt.remove(41);
+      console.log(ttt);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      console.log(
+        "************************************************************* Min & Max & Size in tree *************************************************************"
+      );
+
+
+class Nodede {
+      constructor(data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+      }
+    }
+
+    class BSTTTT {
+      constructor() {
+        this.root = null;
+      }
+
+      insert(data) {
+        const newNode = new Nodede(data);
+        if (!this.root) {
+          this.root = newNode;
+          return;
+        }
+
+        let current = this.root;
+        while (true) {
+          if (data < current.data) {
+            if (!current.left) {
+              current.left = newNode;
+              return;
+            }
+            current = current.left;
+          } else {
+            if (!current.right) {
+              current.right = newNode;
+              return;
+            }
+            current = current.right;
+          }
+        }
+      }
+
+     getMin(){
+      if (this.root === null) return null;
+        let node = this.root;
+        while (node.left !== null) {
+          node = node.left;
+        }
+        node = node.data;
+     }
+
+     getMax(){
+      if (this.root === null) return null; 
+      let node = this.root;
+      while (node.right !== null) {
+        node = node.right
+      }  
+      node = node.data;
+     }
+
+
+
+      size(node = this.root){
+      if (node === null) return null;
+      return 1 + this.size(node.left) + this.size(node.right);    
+      } 
+    
+
+      
+
+    }
+
+    const ttttt = new BSTTTT();
+    const values = [12, 47, 56, 41, 32, 78, 84];
+    values.forEach(v => ttttt.insert(v));
+console.log('real data: [12, 47, 56, 41, 32, 78, 84] ');
+
+    console.log("Minimum:", ttttt.getMin()); 
+    console.log("Maximum:", ttttt.getMax()); 
+    console.log("Size of tree", ttttt.size());
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    console.log('************************************************************* Lowest Comman Ancestor ********************************************************');
+    
+
+
+    class DD {
+  constructor(data) {
+    this.data = data;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+class SS {
+  constructor() {
+    this.root = null;
+  }
+
+  insert(data) {
+    const newNode = new DD(data);
+    if (!this.root) {
+      this.root = newNode;
+      return;
+    }
+
+    let current = this.root;
+    while (true) {
+      if (data < current.data) {
+        if (!current.left) {
+          current.left = newNode;
+          return;
+        }
+        current = current.left;
+      } else {
+        if (!current.right) {
+          current.right = newNode;
+          return;
+        }
+        current = current.right;
+      }
+    }
+  }
+
+lowestCommonAncestor(root = this.root, p ,q){
+  if (!root) return null;
+  if (p < root.data && q < root.data) {
+    return this.lowestCommonAncestor(root.left ,p ,q)
+  }  
+  if (p > root.data && q > root.data) {
+    return this.lowestCommonAncestor(root.right ,p ,q)
+  }
+  return root;
+}
+}
+
+
+const RR = new SS();
+[20, 10, 30, 5, 15, 25, 35].forEach(n => RR.insert(n));
+
+const lca1 = RR.lowestCommonAncestor(RR.root, 5, 15);
+console.log("LCA of 5 and 15:", lca1?.data);  // Output: 10
+
+const lca2 = RR.lowestCommonAncestor(RR.root, 5, 30);
+console.log("LCA of 5 and 30:", lca2?.data);  // Output: 20
+
+
+
+    </script>
+  </body>
+</html>

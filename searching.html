@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching---DSA</title>
+</head>
+<body>
+    <script>
+console.log("********************************************** Linear Searching *********************************************");
+
+console.log("                                      ******** Single Data ********");
+
+function linear(arr , target) {
+    for (let i = 0; i < arr.length; i++) {
+        if (target === arr[i]) {
+            return i;
+        }
+    }
+    return " Not in given data ";
+}
+console.log(`Data [5] at index number: ${linear([2,5,4,6,3,1,7,9,8], 5)}`);
+
+
+
+
+
+
+
+
+
+
+
+function Searching(num , tar) {
+    for (let i = 0; i < num.length; i++) {
+   if (tar === num[i]) {
+     return [i];
+   }
+    }
+    return " Not in given data ";
+}
+console.log(`Data [9] at index number: ${Searching([2,5,4,6,3,1,7,9,8], 9)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+function linearr(nums ,targets) {
+    for (let i = 0; i < nums.length; i++) {
+      if (targets === nums[i]) {
+        return [i];
+      }
+    }
+    return " Not in given data ";
+}
+console.log(`Data [3] at index number: ${linearr([2,5,4,6,3,1,7,9,8], 25)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function linears(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === target) {
+        return i;
+      }
+    }
+    return " Not in given data"
+}
+console.log(`Data [6] at index number: ${linears([2,5,4,6,3,1,7,9,8], 6)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function linearss(num, target) {
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] === target) {
+            return i;
+        }
+    }
+    return " Not in given data "
+}
+console.log(`Data [3] at index number: ${linearss([2,5,4,6,3,1,7,9,8], 3)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("                                      ******** Multiple Data ********");
+
+function global(num, t) {
+    const result = [];
+    for (let i = 0; i < num.length; i++) {
+        if (t === num[i]) {
+            result.push(i);
+     }
+    }
+    if (result.length === 0) return " Not in given data ";
+    return result;
+}
+console.log(`Data [5] at index number: ${global([2,4,5,3,1,5,2,1,3,4], 5)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Global(num, target) {
+    const Result = [];
+    for (let i = 0; i < num.length; i++) {
+     if (target === num[i]) {
+        Result.push(i);
+     }
+    }
+    if (Result.length === 0) return " Not in given data "
+        return Result;
+}
+console.log(`Data [4] at index number: ${global([2,4,5,3,1,5,2,1,3,4], 4)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+function globals(num, target) {
+    const results = [];
+    for (let i = 0; i < num.length; i++) {
+      if (target === num[i]) {
+        results.push(i);
+      }
+    }
+    if (results.length === 0)return " Not in given data "
+    return results;
+}
+console.log(`Data [7] at index number: ${globals([2,4,5,3,1,5,2,1,3,4], 7)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function globalss(num, targer) {
+    const result = [];
+    for (let i = 0; i < num.length; i++) {
+       if (num[i] === targer) {
+        result.push(i);
+       }
+    }
+    if (result.length === 0) return " Not in given data "
+    return result;
+}
+console.log(`Data [2] at index number: ${globalss([2,4,5,3,1,5,2,1,3,4], 2)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function globalsss(num, targer) {
+    const result = [];
+    for (let i = 0; i < num.length; i++) {
+       if (num[i] === targer) {
+        result.push(i);
+       }
+    }
+    if (result.length === 0) return " Not in given data "
+    return result;
+}
+console.log(`Data [3] at index number: ${globalsss([2,4,5,3,1,5,2,1,3,4], 3)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("********************************************** Binary Searching *********************************************");
+
+
+function Binary(num, target) {
+    num.sort((a,b) => a - b);    
+    let start = 0;
+    let end = num.length - 1;
+    while (start <= end) {
+        let middle = Math.floor((start + end) / 2)
+        if (num[middle] === target) {
+            return middle;
+        } else if ( num[middle] < target) {
+             start = middle + 1;
+        } else {
+         end = middle - 1;
+        }
+    }
+    return " Not in given data "
+}
+console.log(`Data [5] at index number after sorting: ${Binary([2,5,4,9,1,3,7,6,8], 5)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Binarys(num, target) {
+    num.sort((a,b) => a - b);
+    let start = 0;
+    let end = num.length - 1;
+    while (start <= end) {
+        let middle = Math.floor((start + end) / 2);
+        if (target === num[middle]) {
+            return middle;
+        } else if (num[middle] < target){
+            start = middle + 1
+        } else{
+            start = end - 1;
+        }
+    }
+    return " Not in given data "
+}
+console.log(`Data [7] at index number after sorting: ${Binarys([2,5,4,9,1,3,7,6,8], 7)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Binaryss(num, target) {
+    num.sort((a,b) => a - b);
+    let start = 0;
+    let end = num.length - 1;
+    while (start <= end) {
+        let middle = Math.floor((start + end) / 2);
+        if (num[middle] === target) {
+            return middle;
+        } else if(num[middle] < target) {
+            start = middle + 1;
+        }else{
+            end = middle - 1;
+        }
+    }
+return " Not given in data "
+}
+console.log(`Data [12] at index number after sorting: ${Binaryss([2,5,4,9,1,3,7,6,8], 12)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Binarysss(num, target) {
+    num.sort((a,b) => a-b);
+    let start = 0;
+    let end = num.length - 1;
+    while (start <= end) {
+        let middle = Math.floor((start + end) / 2);
+        if (num[middle] === target) {
+            return middle;
+        } else if (num[middle] < target) {
+            start = middle + 1;
+        } else {
+            end = middle - 1;
+        }
+    }
+    return " Not in given data "
+}
+console.log(`Data [1] at index number after sorting: ${Binarysss([2,5,4,9,1,3,7,6,8], 1)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Binaryssss(num, targer) {
+    num.sort((a,b) => a - b)
+    let start = 0;
+    let end = num.length - 1;
+    while (start <= end) {
+        let middle = Math.floor((start + end) / 2);
+        if (num[middle] === targer) {
+            return middle;
+        } else if (num[middle] < targer) {
+            start = middle + 1;
+        }
+        else {
+            end = middle - 1;
+        }
+    }
+    return " Not in given data "
+}
+
+console.log(`Data [4] at index number after sorting: ${Binaryssss([2,5,4,9,1,3,7,6,8], 4)}`);
+
+    </script>
+</body>
+</html>

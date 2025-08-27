@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack---DSA</title>
+</head>
+<body>
+    
+</body>
+<script>
+console.log("************************* FIRST TIME ***************************");
+class Stack {
+    constructor(){
+        this.stack = [];
+    }
+
+push(element){
+    this.stack.push(element);
+}
+
+pop(){
+    if (this.isEmpty()) {
+        return "The stack is Empty"
+    }
+    return this.stack.pop();
+}
+
+peek(){
+     if (this.isEmpty()) {
+        return "The stack is Empty"
+    } 
+    return this.stack[this.size()-1];
+}
+
+isEmpty(){
+    return this.size() === 0;
+}
+
+size(){
+    return this.stack.length;
+}
+
+print(){
+    return this.stack;
+}
+
+}
+
+const myStack = new Stack();
+
+myStack.push(10);
+myStack.push(20);
+myStack.push(30);
+myStack.push(40);
+myStack.push(50);
+myStack.push(60);
+myStack.push(70);
+
+console.log(` Top element in a stack is: ${myStack.peek()} `);
+
+console.log(` Stack contain: [ ${myStack.print()} ]`);
+
+myStack.pop();
+
+console.log(` Stack contain after pop: [ ${myStack.print()} ]`);
+
+console.log(` Stack is empty: ${myStack.isEmpty()}`);
+
+console.log(` Size of the stack: ${myStack.size()}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("************************* SECOND TIME ***************************");
+
+
+class Tushar {
+    constructor (){
+        this.stacks = []; 
+    }
+
+push(element) {
+    this.stacks.push(element);
+}
+
+pop() {
+    if (this.isEmpty()) {
+        return "it is empty stack";
+    }
+    return this.stacks.pop();
+}
+
+peek(){
+  if (this.isEmpty()) {
+        return "it is empty stack";
+    }
+    return this.stacks[this.size() - 1];
+}
+
+isEmpty(){
+    return this.size === 0;
+}
+
+size(){
+    return this.stacks.length;
+}
+
+print(){
+    return this.stacks
+}
+
+}
+ 
+const myStacks = new Tushar();
+
+myStacks.push(" vivo ");
+myStacks.push(" oppo ");
+myStacks.push(" iphone ");
+myStacks.push(" sumsung ");
+myStacks.push(" poco ");
+myStacks.push(" nokia ");
+myStacks.push(" oneplus ");
+myStacks.push(" motolora ");
+myStacks.push(" realmi ");
+
+console.log(` Stack contain: [ ${myStacks.print()} ]`);
+
+console.log(` Size of the stack: ${myStacks.size()}`);
+console.log(` Stack is empty: ${myStacks.isEmpty()}`);
+
+
+myStacks.pop();
+
+console.log(` Stack contain after pop: [ ${myStacks.print()} ]`);
+console.log(` Top element in the stack: ${myStacks.peek()}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("************************ THIRDTIME ****************************");
+
+
+
+class node {
+    constructor (){
+        this.data = [];
+    }
+
+    push(item){
+        this.data.push(item);
+    }
+
+    pop(){
+        if (this.isEmpty()) {
+            return "stack is empty"
+        }
+        return this.data.pop();
+    }
+
+    peek(){
+        if (this.isEmpty()) {
+            return "stack is empty"
+        }
+        return this.data[this.size() - 1];
+    }
+
+    isEmpty(){
+        return this.size() === 0;
+    }
+
+    size(){
+        return this.data.length;
+    }
+
+    print(){
+        return this.data;
+    }
+}
+
+const newdata = new node;
+
+console.log(` Stack is empty: ${newdata.isEmpty()}`);
+
+
+newdata.push(" BMW ");
+newdata.push(" Ferrari ");
+newdata.push(" Kia ");
+newdata.push(" Bentley ");
+newdata.push(" Lamborghini ");
+newdata.push(" Maruti ");
+newdata.push(" TATA ");
+
+
+console.log(` Stack contain: [ ${newdata.print()} ]`);
+
+newdata.pop();
+
+console.log(` Size of the stack: ${newdata.size()}`);
+
+console.log(` Stack contain after pop: [ ${newdata.print()} ]`);
+
+console.log(` Top element in the stack: ${newdata.peek()}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("********************** FOURTH TIME **************************");
+
+
+class my {
+    constructor(){
+        this.item = [];
+    }
+
+    push(elements){
+        this.item.push(elements);
+    }
+
+    pop(){
+        if (this.isEmpty() === 0) {
+            return "stack in empty"
+        }
+        return this.item.pop();
+    }
+
+    peek(){
+         if (this.isEmpty()) {
+            return "stack in empty"
+        }
+        return this.item[this.size() - 1];
+    }
+
+    isEmpty(){
+        return this.size() === 0;
+    }
+
+    size(){
+        return this.item.length;
+    }
+
+    print(){
+        return this.item;
+    }
+
+}
+
+const newname = new my;
+
+
+
+console.log(` Stack is empty: ${newname.isEmpty()}`);
+
+
+newname.push(" Apple ");
+newname.push(" Banana ");
+newname.push(" Orange ");
+newname.push(" Grapes ");
+newname.push(" Mango ");
+newname.push(" Pineaaple ");
+
+
+console.log(` Stack contain: [ ${newname.print()} ]`);
+
+newname.pop();
+
+console.log(` Size of the stack: ${newname.size()}`);
+
+console.log(` Stack contain after pop: [ ${newname.print()} ]`);
+
+console.log(` Top element in the stack: ${newname.peek()}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("*********************** FIFTH TIME *****************************");
+
+
+class me {
+    constructor(){
+        this.dataaa = [];
+    }
+
+    push(itemmm){
+        this.dataaa.push(itemmm);
+    }
+
+    pop(){
+        if (this.isEmpty()) {
+            return "stack is empty"
+        }
+        return this.dataaa.pop()
+    }
+
+    peek(){
+         if (this.isEmpty()) {
+            return "stack is empty"
+        }
+        return this.dataaa[this.size() - 1]
+    }
+
+    isEmpty(){
+        return this.size() === 0;
+    }
+
+    size(){
+        return this.dataaa.length;
+    }
+
+    print(){
+        return this.dataaa;
+    }
+
+
+}
+
+const b = new me;
+
+console.log(` Stack is empty: ${b.isEmpty()}`);
+
+
+b.push(" Ahmedabad ");
+b.push(" Bengaluru ");
+b.push(" Surat ");
+b.push(" Chennai ");
+b.push(" Goa ");
+b.push(" Jaipur ");
+b.push(" Hyderabad ");
+b.push(" Pune ");
+
+console.log(` Stack contain: [ ${b.print()} ]`);
+
+b.pop();
+
+console.log(` Size of the stack: ${b.size()}`);
+
+console.log(` Stack contain after pop: [ ${b.print()} ]`);
+
+console.log(` Top element in the stack: ${b.peek()}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("********************** SIXTH TIME ************************");
+
+
+class o {
+    constructor (){
+        this.i = [];
+    }
+
+    push(elem) {
+        this.i.push(elem);
+    }
+
+    pop(){
+   if (this.isEmpty()) {
+    return "stack is empty"
+   }
+   return this.i.pop();
+    }
+
+    peek(){
+    if (this.isEmpty()) {
+    return "stack is empty"
+   }
+   return this.i[this.size() - 1]
+    }
+
+    isEmpty(){
+        return this.size() === 0;
+    }
+
+    size(){
+        return this.i.length; 
+    }
+
+    print(){
+        return this.i;
+    }
+} 
+
+const c = new o;
+ 
+
+
+
+
+c.push(" India ");
+c.push(" Japan ");
+c.push(" Canada ");
+c.push(" Pakistan ");
+c.push(" USA ");
+c.push(" Australia ");
+c.push(" New Zealand ");
+c.push(" China ");
+
+console.log(` Stack contain: [ ${c.print()} ]`);
+
+c.pop();
+c.pop();
+c.pop();
+c.pop();
+c.pop();
+
+console.log(` Stack is empty: ${c.isEmpty()}`);
+
+console.log(` Size of the stack: ${c.size()}`);
+
+console.log(` Stack contain after pop: [ ${c.print()} ]`);
+
+console.log(` Top element in the stack: ${c.peek()}`);
+
+
+
+
+
+</script>
+</html>

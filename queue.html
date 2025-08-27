@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue---DSA</title>
+</head>
+<body>
+    <script>
+console.log("************************************* FIRST TIME *********************************");
+
+class queue {
+    constructor (){
+        this.data = [];
+    }
+
+enqueue(item){
+    this.data.push(item);
+}
+
+dequeue(){
+    if (this.isEmpty()) {
+        return " queue is empty"
+    }
+    return this.data.shift();
+}
+
+peek(){
+    if (this.isEmpty()) {
+        return " queue is empty"
+    }
+    return this.data[0];
+}
+
+isEmpty(){
+    return this.data.length === 0;
+}
+
+size(){
+    return this.data.length
+}
+
+printqueue(){
+    return this.data.join("<-");
+}
+}
+
+const mydata = new queue;
+
+mydata.enqueue(" India ");
+mydata.enqueue(" UK ");
+mydata.enqueue(" Pakistan ");
+mydata.enqueue(" Canada ");
+mydata.enqueue(" USA ");
+mydata.enqueue(" China ");
+mydata.enqueue(" Nepal ");
+
+
+console.log(` Queue contain: ${mydata.printqueue()}`);
+
+mydata.dequeue();
+
+console.log(` Queue is empty: ${mydata.isEmpty()}`);
+
+console.log(` Size of the Queue: ${mydata.size()}`);
+
+console.log(` Queue contain after dequeue : ${mydata.printqueue()}`);
+
+console.log(` Top element in the Queue: ${mydata.peek()}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("************************************* SECOND TIME *********************************");
+
+class Queue {
+    constructor(){
+        this.item = [];
+    }
+
+    enqueue(data){
+        this.item.push(data);
+    }
+
+    dequeue(){
+        if (this.isEmpty()) {
+            return "queue is empty"
+        } 
+        return this.item.shift();
+    }
+
+    peek(){
+          if (this.isEmpty()) {
+            return "queue is empty"
+        } 
+        return this.item[0];
+    }
+
+    isEmpty(){
+    return this.size() === 0;
+    }
+
+    size(){
+    return this.item.length
+    }
+
+    print(){
+    return this.item.join("<-");
+    }
+}
+
+const myitem = new Queue;
+
+
+myitem.enqueue(" Surat ")
+
+console.log(` Queue contain: ${myitem.print()}`);
+
+myitem.dequeue();
+
+console.log(` Queue is empty: ${myitem.isEmpty()}`);
+
+myitem.enqueue(" Mumbai ")
+myitem.enqueue(" Pune ")
+myitem.enqueue(" Goa ")
+myitem.enqueue(" Delhi ")
+
+console.log(` Size of the Queue: ${myitem.size()}`);
+
+console.log(` Queue contain after dequeue : ${myitem.print()}`);
+
+console.log(` Top element in the Queue: ${myitem.peek()}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("************************************* THIRD TIME *********************************");
+
+class q {
+    constructor(){
+        this.datas = [];
+    }
+
+    enqueue(i){
+        this.datas.push(i);
+    }
+
+    dequeue(){
+        if (this.isEmpty()) {
+            return "queue is empty"
+        }
+        return this.datas.shift();
+    }
+
+    peek(){
+         if (this.isEmpty()) {
+            return "queue is empty"
+        }
+        return this.datas[0];
+    }
+
+    isEmpty(){
+        return this.size() === 0;
+    }
+
+    size(){
+        return this.datas.length;
+    }
+
+    print(){
+        return this.datas.join("<-");
+    }
+}
+
+const mydatas = new q;
+
+
+mydatas.enqueue(" Surat ")
+
+console.log(` Queue contain: ${mydatas.print()}`);
+
+mydatas.dequeue();
+
+console.log(` Queue is empty: ${mydatas.isEmpty()}`);
+
+mydatas.enqueue(" Pune ")
+mydatas.enqueue(" Mumbai ")
+mydatas.enqueue(" Goa ")
+mydatas.enqueue(" Delhi ")
+mydatas.enqueue(" Delhi ")
+mydatas.enqueue(" Delhi ")
+mydatas.enqueue(" Delhi ")
+
+
+console.log(` Size of the Queue: ${mydatas.size()}`);
+
+console.log(` Queue contain after dequeue : ${mydatas.print()}`);
+
+console.log(` Top element in the Queue: ${mydatas.peek()}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("************************************* FOURTH TIME *********************************");
+
+class Q {
+    constructor (){
+        this.items = [];
+    }
+
+    enqueue(d){
+        this.items.push(d);
+    }
+
+    dequeue(){
+        if (this.isEmpty()) {
+            return "queue is empty"
+        }
+        return this.items.shift();
+    }
+
+    peek(){
+        if (this.isEmpty()) {
+            return "queue is empty"
+        }
+        return this.items[0];
+    }
+
+    isEmpty(){
+        return this.size() === 0;
+    }
+
+    size(){
+        return this.items.length;
+    }
+
+    print(){
+        return this.items.join("<-");
+    }
+
+}
+
+const myitems = new Q;
+
+myitems.enqueue(" 100 ")
+
+console.log(` Queue contain: ${myitems.print()}`);
+
+myitems.dequeue();
+
+console.log(` Queue is empty: ${myitems.isEmpty()}`);
+
+myitems.enqueue(" 10 ")
+myitems.enqueue(" 20 ")
+myitems.enqueue(" 30 ")
+myitems.enqueue(" 40 ")
+myitems.enqueue(" 50 ")
+
+
+
+
+console.log(` Size of the Queue: ${myitems.size()}`);
+
+console.log(` Queue contain after dequeue : ${myitems.print()}`);
+
+console.log(` Top element in the Queue: ${myitems.peek()}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("************************************* FIFTH TIME *********************************");
+
+class T {
+    constructor (){
+        this.itemsss = [];
+    }
+
+    enqueue(da){
+        this.itemsss.push(da);
+    }
+
+    dequeue(){
+        if (this.isEmpty()) {
+            return "queue is empty"
+        }
+        return this.itemsss.shift();
+    }
+
+    peek(){
+        if (this.isEmpty()) {
+            return "queue is empty"
+        }
+        return this.itemsss[0];
+    }
+
+    isEmpty(){
+        return this.size() === 0;
+    }
+
+    size(){
+        return this.itemsss.length;
+    }
+
+    print(){
+        return this.itemsss.join("<-");
+    }
+
+}
+
+const myitemss = new Q;
+
+myitemss.enqueue(" cricket")
+
+console.log(` Queue contain: ${myitemss.print()}`);
+
+myitemss.dequeue();
+
+console.log(` Queue is empty: ${myitemss.isEmpty()}`);
+
+myitemss.enqueue(" football ")
+myitemss.enqueue(" carram ")
+myitemss.enqueue(" ludo ")
+myitemss.enqueue(" chess ")
+myitemss.enqueue(" table-tennis ")
+
+
+
+
+console.log(` Size of the Queue: ${myitemss.size()}`);
+
+console.log(` Queue contain after dequeue : ${myitemss.print()}`);
+
+console.log(` Top element in the Queue: ${myitemss.peek()}`);
+
+    </script>
+</body>
+</html>
