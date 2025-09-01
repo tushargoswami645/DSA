@@ -667,7 +667,7 @@ class Nodede {
         while (node.left !== null) {
           node = node.left;
         }
-        node = node.data;
+        return node.data;
      }
 
      getMax(){
@@ -676,7 +676,7 @@ class Nodede {
       while (node.right !== null) {
         node = node.right
       }  
-      node = node.data;
+       return node.data;
      }
 
 
@@ -814,3 +814,4 @@ console.log("LCA of 5 and 30:", lca2?.data);  // Output: 20
     </script>
   </body>
 </html>
+
